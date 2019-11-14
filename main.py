@@ -15,7 +15,7 @@ driver.implicitly_wait(3)
 
 html = driver.page_source
 
-num_of_pagedowns = 500
+num_of_pagedowns = 10
 
 elem = driver.find_elements_by_class_name('section-layout.section-scrollbox.scrollable-y.scrollable-show')[-1]
 
@@ -29,6 +29,10 @@ search_result = driver.find_elements_by_class_name('section-review-text')
 review_list = []
 for review in search_result:
     review_list.append(review.text)
+
+with open('your_file.txt', 'w') as f:
+    for item in review_list:
+        f.write("%s\n" % item)
 
 print(review_list)
 driver.close()
