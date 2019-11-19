@@ -1,10 +1,9 @@
 import os
-from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 import time
-import requests as req
-from bs4 import BeautifulSoup
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 chrome_driver_path = os.path.join(BASE_DIR, 'chromedriver')
